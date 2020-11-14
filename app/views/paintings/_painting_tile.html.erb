@@ -1,8 +1,16 @@
-<div class="tile-size flex flex-col items-center bg-green-300 mx-4 rounded-sm">
-  <%= image_tag(painting.thumbnail(0)) if painting.images.attached? %>
-  <div class="flex flex-col items-center justify-between w-full h-full">
-    <h3 class="text-xl mt-2"><%= painting.name %></h3>
-    <div class="w-full min-h-10 flex justify-end py-2">
+<div class="tile-size flex flex-col items-center bg-green-300
+            mx-6 mb-8 overflow-hidden rounded-lg shadow-lg
+            hover:shadow-none transition-all duration-700">
+  <% if painting.images.attached? %>
+    <%= link_to painting do %>
+      <%= image_tag(painting.thumbnail(0)) %>
+    <% end %>
+  <% end %>
+  <div class="flex flex-col items-center justify-between w-full h-full pt-4">
+    <%= link_to painting do %>
+      <h3 class="text-xl"><%= painting.name %></h3>
+    <% end %>
+    <div class="w-full min-h-10 flex justify-end py-2 pr-2">
       <h4 class="text-lg">size: <%= painting.size %> </h4>
       <h4 class="text-lg ml-4">price: <%= number_to_currency painting.price %> </h4>
     </div>

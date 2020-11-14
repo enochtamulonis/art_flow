@@ -14,13 +14,23 @@
  *= require_self
  */
 
+ .large-card-size {
+   width: 85vw;
+   min-height: 60em;
+ }
+
 .card-size {
   margin-top: 5em;
   width: 40em;
   height: 40em;
 }
 
+.admin-tile {
+  height: 30em;
+  width: 25em;
+}
+
 .tile-size {
-  height: 35em;
+  height: 38em;
   width: 30em;
 }

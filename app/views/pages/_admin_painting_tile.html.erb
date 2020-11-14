@@ -1,0 +1,15 @@
+<div class="admin-tile bg-green-500 overflow-hidden rounded">
+  <% if painting.images.attached? %>
+    <%= image_tag(painting.thumbnail(0)) %>
+  <% end %>
+  <div class="flex flex-col items-center justify-between w-full pt-4">
+    <%= link_to painting do %>
+      <h3 class="text-xl"><%= painting.name %></h3>
+    <% end %>
+    <br><br> <br>
+    <div class="w-full h-full flex justify-end mt-10 pt-10 pr-2">
+      <h4 class="text-lg">size: <%= painting.size %> </h4>
+      <h4 class="text-lg ml-4">price: <%= number_to_currency painting.price %> </h4>
+    </div>
+  </div>
+</div>

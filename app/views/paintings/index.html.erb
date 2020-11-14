@@ -2,11 +2,9 @@
   <br>
   <h1 class="text-4xl mt-10">All Paintings</h1>
   <br>
-  <div class="h-full sm:w-full lg:w-10/12 flex flex-wrap">
+  <div class="h-full sm:w-full lg:w-10/12 flex justify-center flex-wrap">
     <% @paintings.each do |painting| %>
-      <%= link_to painting do %>
-        <%= render 'painting_tile', :painting => painting %>
-      <% end %>
+      <%= render 'painting_tile', :painting => painting %>
     <% end %>
   </div>
 </div>
