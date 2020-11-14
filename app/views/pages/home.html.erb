@@ -1,0 +1,13 @@
+<div class="w-full flex flex-col items-center min-h-screen bg-blue-300">
+  <div class="large-pic-container home-page-image"></div>
+  <h2 class="my-10 text-5xl">New Art</h2>
+  <br>
+  <div class="w-full h-full flex justify-between pt-10 border-t-2 border-black">
+    <% @newest_paintings.each do |painting| %>
+      <%= render 'paintings/painting_tile', :painting => painting %>
+    <% end %>
+  </div>
+  <div class="w-full min-h-10 flex justify-center py-4">
+    <%= link_to "View all", paintings_path, :class => "text-2xl text-gray-700 hover:text-gray-900 transition-all duration-300" %>
+  </div>
+</div>

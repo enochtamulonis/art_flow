@@ -1,0 +1,16 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+.large-pic-container {
+  height: 70vh;
+  width: 100%;
+  background-size: cover;
+}
+
+.home-page-image {
+  background-image: url("/store_bg.jpg");
+}
+
+.about-page-image {
+  background-image: url("/art.jpg");
+}
