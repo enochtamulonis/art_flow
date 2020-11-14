@@ -1,7 +1,7 @@
 // postcss.config.js
 let environment = {
   plugins: [
-    require('tailwindcss')('./javascript/stylesheets/tailwind.js'),
+    require('tailwindcss')('./app/javascript/stylesheets/tailwind.js'),
     require('postcss-import'),
     require('postcss-flexbugs-fixes'),
     require('postcss-preset-env')({
