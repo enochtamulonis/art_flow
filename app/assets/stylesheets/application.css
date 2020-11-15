@@ -43,6 +43,8 @@
 .body-container {
   max-width: 1250px;
   margin: auto 40px;
+  display: flex;
+  flex-direction: column;
 }
 
 .top-space {
@@ -51,7 +53,10 @@
 }
 
 @media (max-width: 750px) {
+
   .body-container {
     margin: 0px;
+    width: 100%;
   }
+
 }
