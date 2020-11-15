@@ -43,8 +43,12 @@
 .body-container {
   max-width: 1250px;
   margin: auto 40px;
-  display: flex;
-  flex-direction: column;
+}
+
+.page-width {
+  height: 100vh;
+  background-color: pink;
+  flex-grow: 1;
 }
 
 .top-space {

@@ -21,6 +21,9 @@ gem 'jbuilder', '~> 2.7'
 # BEGIN CUSTOM GEMS
 gem 'devise'
 
+gem "aws-sdk-s3", require: false
+
+
 # END CUSTOM GEMS
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
