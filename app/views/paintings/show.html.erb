@@ -1,5 +1,12 @@
-<div class="h-screen w-full">
-  <% @painting.images.each do |image| %>
-    <%= image_tag(image) %>
-  <% end %>
+<div class="h-screen w-full flex flex-col">
+  <div class="h-full w-full flex">
+    <% @painting.images.each do |image| %>
+      <div class="image-slide">
+        <%= image_tag(image.variant(resize_to_fill: [600, 600, { gravity: "Center" }])) %>
+      </div>
+    <% end %>
+  </div>
+  <div class="h-full w-full">
+
+  </div>
 </div>
