@@ -14,23 +14,44 @@
  *= require_self
  */
 
+ body {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+ }
+
  .large-card-size {
    width: 85vw;
    min-height: 60em;
  }
 
 .card-size {
-  margin-top: 5em;
   width: 40em;
   height: 40em;
 }
 
 .admin-tile {
-  height: 30em;
-  width: 25em;
+  min-height: 30em;
+  width: 30em;
 }
 
 .tile-size {
   height: 38em;
   width: 30em;
+}
+
+.body-container {
+  max-width: 1250px;
+  margin: auto 40px;
+}
+
+.top-space {
+  height: 8em;
+  width: 100%;
+}
+
+@media (max-width: 750px) {
+  .body-container {
+    margin: 0px;
+  }
 }

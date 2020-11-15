@@ -1,7 +1,10 @@
-<div class="h-full w-full bg-blue-200">
-  <div class="h-10 py-10 w-full bg-yellow-200 flex items-center justify-center"> <h2 class="text-2xl"> Admin Page </h2> </div>
-  <div class="w-full h-full bg-blue-300 flex flex-col items-center pt-10">
-    <div class="large-card-size flex flex-col items-center bg-gray-700">
+<div class="h-full w-full flex-grow bg-blue-200">
+  <div class="h-10 py-10 w-full bg-yellow-200 flex items-center justify-between px-2">
+    <h2 class="text-2xl"> Admin Page </h2>
+    <%= link_to "Create Listing", new_painting_path, :class => "px-4 py-1 border-2 border-green-400 text-xl hover:bg-green-400 transition-all duration-300" %>
+  </div>
+  <div class="w-full h-full bg-blue-300 flex flex-col items-center">
+    <div class="w-full flex flex-col items-center bg-gray-700">
       <h3 class="text-3xl my-10">All Listings</h3>
       <div class="w-full h-full flex justify-around flex-wrap">
         <% @paintings.each do |painting| %>

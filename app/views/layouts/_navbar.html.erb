@@ -1,18 +1,10 @@
-<nav class="min-h-10 w-full px-4 py-1 flex items-center justify-between bg-gray-300 sticky top-0">
+<nav class="min-h-10 w-full px-4 py-2 flex items-center justify-between border-t border-b border-black">
   <div class="min-w-10 flex items-center">
     <%= link_to "Art Flow", root_path, :class => "text-3xl hover:text-gray-900" %>
     <%= link_to "Paintings", paintings_path, :class => "text-xl ml-4 hover:text-gray-800" %>
     <%= link_to "About", pages_about_path, :class => "text-lg ml-4 hover:text-gray-700" %>
   </div>
   <div class="flex items-center min-w-10">
-    <% unless current_user %>
-      <%= link_to "Sign In", new_user_session_path, :class => "text-green-600 pr-4 hover:text-black duration-all duration-700" %>
-      <%= link_to "Sign Up", new_user_registration_path, :class => "px-8 py-2 border-2 border-black hover:bg-green-600 transition-all duration-700" %>
-    <% else %>
-      <% if current_user.admin? %>
-        <%= link_to "Admin", pages_admin_path, :class => " bg-transparent text-gray-900" %>
-      <% end %>
-      <%= button_to "Sign Out", destroy_user_session_path, :method => :delete, :class => "px-8 py-2 border-2 border-black hover:bg-green-600 transition-all duration-700 ml-4" %>
-    <% end %>
+
   </div>
 </nav>

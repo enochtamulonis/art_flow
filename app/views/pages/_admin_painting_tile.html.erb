@@ -1,4 +1,7 @@
-<div class="admin-tile bg-green-500 overflow-hidden rounded">
+<div class="admin-tile bg-green-200 mb-10 overflow-hidden rounded">
+  <div class="min-h-10 flex justify-end absolute">
+    <%= link_to "Edit", edit_painting_path(painting), :class => "px-8 py-1 bg-yellow-300 border-2 border-yellow-300 hover:bg-transparent text-2xl transition-all duration-300"%>
+  </div>
   <% if painting.images.attached? %>
     <%= image_tag(painting.thumbnail(0)) %>
   <% end %>
