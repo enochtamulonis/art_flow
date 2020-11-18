@@ -1,6 +1,6 @@
 <div class="h-screen w-full flex flex-col">
   <div class="h-full w-full flex">
-    <% @painting.images.each do |image| %>
+    <% @painting.images.each.with_index do |image, index| %>
       <div class="image-slide">
         <%= image_tag(image.variant(resize_to_fill: [600, 600, { gravity: "Center" }])) %>
       </div>
