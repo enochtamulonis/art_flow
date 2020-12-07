@@ -16,8 +16,4 @@ require("channels")
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 import "stylesheets/application" // ADD THIS LINE
-
-import StimulusReflex from 'stimulus_reflex'
-import consumer from '../channels/consumer'
-import controller from '../controllers/index'
-StimulusReflex.initialize(application, { consumer, controller, debug: false })
+import controller from '../controllers/index.js'
