@@ -1,3 +1,33 @@
 // Place all the styles related to the paintings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+.carousel-buttons {
+  width: 600px;
+}
+
+.image {
+  height: 600px;
+  width: 600px;
+}
+
+.impressionistic-btn:hover {
+  background-color: none;
+  background-image: url("/impressionistic.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+
+.landscapes-btn:hover {
+  background-color: none;
+  background-image: url("/landscape.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.abstract-btn:hover {
+  background-color: none;
+  background-image: url("/abstract.jpg");
+  background-position: center;
+  background-size: cover;
+}

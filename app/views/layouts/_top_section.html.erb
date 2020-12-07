@@ -1,8 +1,8 @@
-<div class="top-space flex items-end justify-end">
+<div class="top-space flex items-end justify-end px-2">
   <div class="flex items-center pb-4">
     <% unless current_user %>
-      <%= link_to "Sign In", new_user_session_path, :class => "text-green-600 pr-4 hover:text-black duration-all duration-700" %>
-      <%= link_to "Sign Up", new_user_registration_path, :class => "px-8 py-2 border-2 border-black hover:bg-green-600 transition-all duration-700" %>
+      <%= link_to "Create account", new_user_registration_path, :class => "pr-4" %>
+      <%= link_to "Sign In", new_user_session_path, :class => "px-8 py-2 border-2 border-black " %>
     <% else %>
       <% if current_user.admin? %>
         <%= link_to "Admin", pages_admin_path, :class => " bg-transparent text-gray-900" %>

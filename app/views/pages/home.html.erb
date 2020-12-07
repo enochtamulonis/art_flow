@@ -1,13 +1,16 @@
 <div class="w-full flex flex-col items-center min-h-screen">
   <div class="large-pic-container home-page-image"></div>
-  <h2 class="my-10 text-5xl">New Art</h2>
+  <h2 class="my-10 text-5xl pt-4">Categories</h2>
   <br>
-  <div class="w-full h-full flex flex-wrap justify-around pt-10 border-t-2 border-black">
-    <% @newest_paintings.each do |painting| %>
-      <%= render 'paintings/painting_tile', :painting => painting %>
-    <% end %>
-  </div>
-  <div class="w-full min-h-10 flex justify-center py-4">
-    <%= link_to "View all", paintings_path, :class => "text-2xl text-gray-700 hover:text-gray-900 transition-all duration-300" %>
+  <div class="w-full h-full flex flex-col py-10 border-t-2 border-black">
+    <a href="<%= paintings_path %>" class="landscapes-btn flex justify-center items-center bg-gray-300 w-full min-h-10 py-8 cursor-pointer">
+      <h3 class="text-xl text-gray-900 bg-gray-300 px-8 py-2 transform hover:scale-105 transition-transform duration-300">Landscapes</h3>
+    </a>
+    <a href="<%= paintings_path %>" class="impressionistic-btn flex justify-center items-center bg-gray-300 w-full min-h-10 py-8 mt-6 cursor-pointer">
+      <h3 class="text-xl text-gray-900 bg-gray-300 px-8 py-2 transform hover:scale-105 transition-transform duration-300">Impressionistic art</h3>
+    </a>
+    <a href="<%= paintings_path %>" class="abstract-btn flex justify-center items-center bg-gray-300 w-full min-h-10 py-8 my-6 cursor-pointer">
+      <h3 class="text-xl text-gray-900 bg-gray-300 px-8 py-2 transform hover:scale-105 transition-transform duration-300">Abstract</h3>
+    </a>
   </div>
 </div>

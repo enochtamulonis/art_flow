@@ -1,8 +1,13 @@
 <div class="h-screen w-full flex flex-col">
-  <div class="h-full w-full flex">
+  <br><br>
+  <div class="h-full w-full flex bg-green-500" data-controller="carousel">
     <% @painting.images.each.with_index do |image, index| %>
-      <div class="image-slide">
+      <div class="hidden image" data-target="carousel.image" id="image-<%= index %>" data-index="<%= index %>">
         <%= image_tag(image.variant(resize_to_fill: [600, 600, { gravity: "Center" }])) %>
+        <div class="carousel-buttons h-10 flex justify-between items-center px-4 absolute ">
+          <a data-action="carousel#previousImage" class="text-white text-5xl hover:text-gray-600 transition-all duration-200 cursor-pointer"><</a>
+          <a data-action="carousel#nextImage" class="text-white text-5xl hover:text-gray-600 transition-all duration-200 cursor-pointer">></a>
+        </div>
       </div>
     <% end %>
   </div>
