@@ -2,13 +2,26 @@ import { Controller } from "stimulus"
 
 let totalImages
 
+let currentScreenSize
+
 export default class extends Controller {
-  static targets = ["image"]
+  static targets = ["image", "buttons"]
 
     initialize() {
-      totalImages = this.imageTargets.length;
-      console.log(totalImages);
       this.showImage(0);
+      this.setScreenSize();
+      totalImages = this.imageTargets.length;
+    }
+
+    setScreenSize() {
+      currentScreenSize = window.innerWidth;
+    }
+
+    toggleButtons(event) {
+      let screenIsBig = currentScreenSize > 768;
+      if (screenIsBig) {
+        this.buttonsTarget.classList.toggle("md:hidden");
+      }
     }
 
     nextImage(event) {
@@ -17,23 +30,22 @@ export default class extends Controller {
       if (document.getElementById(`image-${nextI}`) !== null) {
         this.showImage(nextI)
       } else {
-        this.initialize();
+        this.showImage(0);
       }
     }
 
-    previousImage() {
+    previousImage(event) {
       this.hideImage(event);
-      let prevI = this.index - 1
-      if (document.getElementById(`image-${prevI}`) !== null) {
-        this.showImage(prevI)
+      let prevI = this.index - 1;
+      console.log(this.index);
+      if (this.index == 0) {
+        this.showImage(totalImages - 1);
       } else {
-        console.log(totalImages);
-        this.showImage(totalImages)
+        this.showImage(prevI);
       }
     }
 
     showImage(index) {
-      console.log(index);
       this.index = index;
       this.imageTargets.forEach((el, i) => {
         if (index == i) {
@@ -43,6 +55,11 @@ export default class extends Controller {
     }
 
     hideImage(event) {
-      event.srcElement.parentNode.parentNode.classList.toggle("hidden");
+      this.imageTargets.forEach((el, i) => {
+        if (this.index == el.dataset.index) {
+          el.classList.toggle("hidden");
+        }
+      });
+
     }
 }

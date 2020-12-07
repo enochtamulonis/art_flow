@@ -8,6 +8,10 @@
 .image {
   height: 600px;
   width: 600px;
+  -webkit-tap-highlight-color:transparent;
+  -webkit-user-select: none; /* Chrome/Safari */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* IE10+ */
 }
 
 .impressionistic-btn:hover {

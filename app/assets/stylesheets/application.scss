@@ -13,12 +13,19 @@
  *= require_tree .
  *= require_self
  */
+   $fa-font-path: '@fortawesome/fontawesome-free/webfonts';
+  @import '@fortawesome/fontawesome-free/scss/fontawesome';
+  @import '@fortawesome/fontawesome-free/scss/solid';
+  @import '@fortawesome/fontawesome-free/scss/regular';
+  @import '@fortawesome/fontawesome-free/scss/brands';
+  @import '@fortawesome/fontawesome-free/scss/v4-shims';
 
  body {
    display: flex;
    flex-direction: column;
    align-items: center;
  }
+
 
  .large-card-size {
    width: 85vw;
