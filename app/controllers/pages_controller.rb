@@ -11,6 +11,10 @@ class PagesController < ApplicationController
     @paintings = Painting.order(updated_at: :desc)
   end
 
+  def contact
+
+  end
+
   private
 
   def is_admin?

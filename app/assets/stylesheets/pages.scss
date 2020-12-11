@@ -1,16 +1,30 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+/* Cross Page Styling */
+
+
 .large-pic-container {
   height: 70vh;
   width: 100%;
   background-size: cover;
 }
 
+/* Home Page Styling */
+
 .home-page-image {
   background-image: url("/store_bg.jpg");
 }
 
+/* About Page Styling */
+
 .about-page-image {
   background-image: url("/art.jpg");
+}
+
+/* Contact Page Styling */
+
+.contact-page-container {
+  height: 60vh;
+  width: 100%;
 }

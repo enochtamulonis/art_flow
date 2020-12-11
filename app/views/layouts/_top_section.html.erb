@@ -5,7 +5,7 @@
       <%= link_to "Sign In", new_user_session_path, :class => "px-8 py-2 border-2 border-black " %>
     <% else %>
       <% if current_user.admin? %>
-        <%= link_to "Admin", pages_admin_path, :class => " bg-transparent text-gray-900" %>
+        <%= link_to "Admin", pages_admin_path, :class => " bg-transparent #{is_active_by_action?("admin")} " %>
       <% end %>
       <%= button_to "Sign Out", destroy_user_session_path, :method => :delete, :class => "px-8 py-2 border-2 border-black hover:bg-green-600 transition-all duration-700 ml-4" %>
     <% end %>
