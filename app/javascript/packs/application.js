@@ -18,3 +18,5 @@ require("channels")
 import "@fortawesome/fontawesome-free/js/all";
 import "stylesheets/application" // ADD THIS LINE
 import controller from '../controllers/index.js'
+
+import "controllers"

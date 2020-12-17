@@ -1,55 +1,17 @@
 // Place all the styles related to the paintings controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+/* Show Page Styling */
+
 .carousel-buttons {
-  width: 600px;
+  width: 500px;
 }
 
 .image {
-  height: 600px;
-  width: 600px;
+  height: 500px;
+  width: 500px;
   -webkit-tap-highlight-color:transparent;
   -webkit-user-select: none; /* Chrome/Safari */
   -moz-user-select: none; /* Firefox */
   -ms-user-select: none; /* IE10+ */
-}
-
-.impressionistic-btn:hover {
-  background-image: url("/impressionistic.jpg");
-  background-position: center;
-  background-size: cover;
-}
-
-
-.landscapes-btn:hover {
-  background-image: url("/landscape.jpg");
-  background-position: center;
-  background-size: cover;
-}
-
-.abstract-btn:hover {
-  background-image: url("/abstract.jpg");
-  background-position: center;
-  background-size: cover;
-}
-
-@media (max-width: 900px) {
-  .impressionistic-btn {
-    background-image: url("/impressionistic.jpg") !important;
-    background-position: center !important;
-    background-size: cover;
-  }
-
-
-  .landscapes-btn {
-    background-image: url("/landscape.jpg");
-    background-position: center;
-    background-size: cover;
-  }
-
-  .abstract-btn {
-    background-image: url("/abstract.jpg");
-    background-position: center;
-    background-size: cover;
-  }
 }

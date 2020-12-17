@@ -27,11 +27,16 @@
    align-items: center;
  }
 
+  .site-size {
+    max-width: 1250px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+ /* Navbar and Top Section */
  .top-space {
    height: 8em;
-   width: 100%;
  }
-
  /* Sidebar Cart Styling */
 
  .sidebar {
@@ -40,7 +45,9 @@
    position: fixed;
    right: 0;
    z-index: 11;
+   transition: width 700ms;
  }
+
 
  /* Styling for Posts*/
 
@@ -62,12 +69,11 @@
 }
 
 .tile-size {
-  height: 38em;
-  width: 30em;
+  height: 30em;
+  width: 24em;
 }
 
 .body-container {
-  max-width: 1250px;
   margin: auto 40px;
   width: 100%;
 }

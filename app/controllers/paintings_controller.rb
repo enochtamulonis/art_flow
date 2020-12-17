@@ -1,6 +1,7 @@
 class PaintingsController < ApplicationController
   before_action :set_painting, only: [:show, :edit, :update, :destroy]
   before_action :is_admin?, except: [:show, :index]
+  before_action :set_order_items
   # GET /paintings
   # GET /paintings.json
   def index
@@ -10,6 +11,10 @@ class PaintingsController < ApplicationController
   # GET /paintings/1
   # GET /paintings/1.json
   def show
+    @order_item = current_order.order_items.new
+    # if (@order_items.map {|item| item.painting }).includes?(@painting)
+    #   @increment_order_item = OrderItem.find_by_id(item)
+    # end
   end
 
   # GET /paintings/new
@@ -63,6 +68,11 @@ class PaintingsController < ApplicationController
   end
 
   private
+
+    def set_order_items
+      @order_items = current_order.order_items
+    end
+
     def is_admin?
       redirect_to root_path unless current_user.try(:admin)
     end

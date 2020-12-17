@@ -1,29 +1,29 @@
 <div class="h-screen w-full flex flex-col">
   <br>
-  <div class="w-full h-full flex mt-4">
+  <div class="site-size h-full flex flex-col md:flex-row mt-4">
     <div class="image flex items-center relative"  data-controller="carousel" data-action="mouseover->carousel#toggleButtons
                                                                               mouseout->carousel#toggleButtons
                                                                               resize@window->carousel#setScreenSize">
       <% @painting.images.each.with_index do |image, index| %>
-        <div class="hidden image" id="image-<%= index %>" data-target="carousel.image" data-index="<%= index %>">
-          <%= image_tag(image.variant(resize_to_fill: [600, 600, { gravity: "Center" }])) %>
+        <div class="hidden image" id="image-<%= index %>" data-carousel-target="image" data-index="<%= index %>">
+          <%= image_tag(image.variant(resize_to_fill: [500, 500, { gravity: "Center" }])) %>
         </div>
       <% end %>
-      <div class="carousel-buttons h-10 flex justify-between items-center px-4 absolute md:hidden" data-target="carousel.buttons">
+      <div class="carousel-buttons h-10 flex justify-between items-center px-4 absolute md:hidden" data-carousel-target="buttons">
         <a data-action="carousel#previousImage"><i class="cursor-pointer fa fa-arrow-left fa-3x"></i></a>
         <a data-action="carousel#nextImage"><i class="cursor-pointer fa fa-arrow-right fa-3x"></i></a>
       </div>
     </div>
-    <div class="h-full w-full flex flex-col items-center mt-10">
+    <div class="md:ml-auto h-full w-full md:w-1/2 flex flex-col items-center">
       <h2 class="text-4xl pt-10 my-6"> <%= @painting.name %> </h2>
       <h3 class="text-2xl mb-10"> <%= number_to_currency(@painting.price) %> </h3>
       <br>
       <a class="cursor-pointer mt-10 min-h-10 w-3/4 py-4 border-2 border-black flex justify-center items-center">
         Buy Now
       </a>
-      <a class="cursor-pointer mt-10 min-h-10 w-3/4 py-4 bg-black text-white border-2 border-black flex justify-center items-center">
-        Add To Cart
-      </a>
+      <div class="w-full h-full" id="add_to_cart_button">
+        <%= render "paintings/add_to_cart_button", locales: {order_item: @order_items, painting: @painting } %>
+      </div>
     </div>
   </div>
 </div>

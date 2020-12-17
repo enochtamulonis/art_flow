@@ -28,3 +28,43 @@
   height: 60vh;
   width: 100%;
 }
+
+.impressionistic-btn:hover {
+  background-image: url("/impressionistic.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+
+.landscapes-btn:hover {
+  background-image: url("/landscape.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.abstract-btn:hover {
+  background-image: url("/abstract.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+@media (max-width: 900px) {
+  .impressionistic-btn {
+    background-image: url("/impressionistic.jpg") !important;
+    background-position: center !important;
+    background-size: cover;
+  }
+
+
+  .landscapes-btn {
+    background-image: url("/landscape.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+
+  .abstract-btn {
+    background-image: url("/abstract.jpg");
+    background-position: center;
+    background-size: cover;
+  }
+}

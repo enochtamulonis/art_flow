@@ -1,7 +1,7 @@
 <%= link_to painting do %>
   <div class="tile-size flex flex-col cursor-pointer
-              mx-10 my-10 overflow-hidden rounded-lg shadow-lg
-              hover:shadow-none transition-all duration-700">
+              mx-6 my-8 overflow-hidden rounded-lg shadow-lg
+              hover:shadow-sm transition-all duration-700">
     <% if painting.images.attached? %>
       <%= image_tag(painting.thumbnail(0)) %>
     <% end %>

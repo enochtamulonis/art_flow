@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :order_items
+  get 'cart/show'
   resources :paintings
   devise_for :users
   root 'pages#home'

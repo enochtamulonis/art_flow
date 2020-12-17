@@ -1,0 +1,11 @@
+<div class="h-screen site-size flex flex-col items-center">
+  <% @order_items.each do | order_item |%>
+    <div class="w-full min-h-10 py-4 bg-gray-300 flex justify-between">
+      <div class="flex">
+        <h2 class="text-lg text-green-500"><%= order_item.painting.name %></h2>
+        <h2 class="text-lg text-green-800 ml-6"><%= order_item.quantity %> item</h2>
+      </div>
+      <h3 class="text-lg text-green-500"><%= number_to_currency order_item.total %></h3>
+    </div>
+  <% end %>
+</div>
