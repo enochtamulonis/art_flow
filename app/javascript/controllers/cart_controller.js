@@ -41,14 +41,6 @@ export default class extends ApplicationController {
   // beforeDance(element, reflex, noop, reflexId) {
   //  element.innerText = 'Putting dance shoes on...'
   // }
-     addItemSuccess(element) {
-       console.log("Success")
-       // document.getElementById("sidebar").style.width = "500px";
-     }
-  // danceSuccess(element, reflex, noop, reflexId) {
-  //   element.innerText = 'Danced like no one was watching! Was someone watching?'
-  // }
-
   // danceError(element, reflex, error, reflexId) {
   //   console.error('danceError', error);
   //   element.innerText = "Couldn't dance!"

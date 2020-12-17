@@ -1,13 +1,18 @@
-import { Controller } from "stimulus"
+import ApplicationController from './application_controller'
 
 let totalImages
 
 let currentScreenSize
 
-export default class extends Controller {
+
+/* This is the custom StimulusReflex controller for the Cart Reflex.
+ * Learn more at: https://docs.stimulusreflex.com
+ */
+export default class extends ApplicationController {
   static targets = ["image", "buttons"]
 
-    initialize() {
+    connect() {
+      super.connect()
       this.showImage(0);
       this.setScreenSize();
       totalImages = this.imageTargets.length;

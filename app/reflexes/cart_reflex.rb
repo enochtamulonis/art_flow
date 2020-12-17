@@ -27,23 +27,13 @@ class CartReflex < ApplicationReflex
     @order_item = @order.order_items.new(order_params)
     @order.save
     session[:order_id] = @order.id
-    morph "#sidebar_items", ApplicationController.render(
-      partial: "cart/sidebar_items",
-      locals: { order_items: @order.order_items}
-    )
   end
 
   def remove
     @order = current_order
     puts" 💥 💥 "
-    puts element
     item = OrderItem.find_by_id(element.dataset[:id].to_i)
     item.destroy
-    morph "#sidebar_items", ApplicationController.render(
-      partial: "cart/sidebar_items",
-      locals: { order_items: @order.order_items}
-    )
-
   end
 
   private

@@ -5,7 +5,7 @@
                                                                               mouseout->carousel#toggleButtons
                                                                               resize@window->carousel#setScreenSize">
       <% @painting.images.each.with_index do |image, index| %>
-        <div class="hidden image" id="image-<%= index %>" data-carousel-target="image" data-index="<%= index %>">
+        <div class="hidden image" id="image-<%= index %>" data-carousel-target="image" data-index="<%= index %>" data-reflex-permanent>
           <%= image_tag(image.variant(resize_to_fill: [500, 500, { gravity: "Center" }])) %>
         </div>
       <% end %>
@@ -21,7 +21,7 @@
       <a class="cursor-pointer mt-10 min-h-10 w-3/4 py-4 border-2 border-black flex justify-center items-center">
         Buy Now
       </a>
-      <div class="w-full h-full" id="add_to_cart_button">
+      <div class="w-full h-full" add_to_cart_button>
         <%= render "paintings/add_to_cart_button", locales: {order_item: @order_items, painting: @painting } %>
       </div>
     </div>

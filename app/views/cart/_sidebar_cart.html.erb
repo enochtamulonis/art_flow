@@ -4,7 +4,7 @@
   </div>
   <h2 class="text-3xl text-center"> Your Cart </h2>
   <% if @order_items %>
-    <div id="sidebar_items">
+    <div order_items>
       <%= render 'cart/sidebar_items', :order_items => @order_items %>
     </div>
   <% end %>
