@@ -1,10 +1,6 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  static targets = ["sidebar"]
+  static targets = ["sidebar", "orderItem"]
 
-  closeCart(event) {
-    event.preventDefault();
-    this.sidebarTarget.style.width = "0px";
-  }
 }

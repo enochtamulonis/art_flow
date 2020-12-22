@@ -20,6 +20,11 @@
  @import '@fortawesome/fontawesome-free/scss/brands';
  @import '@fortawesome/fontawesome-free/scss/v4-shims';
 
+ @font-face {
+    font-family: 'typewriter';
+    src: font-url('/assets/typewriter');
+ }
+
  /* Main Styling */
  body {
    display: flex;
@@ -34,19 +39,26 @@
     margin-right: auto;
   }
  /* Navbar and Top Section */
+
+.fifteen-rem-margin {
+  margin-bottom: 5rem;
+}
+
+ /* Fonts */
+
+ .typewriter {
+   font-family: 'typewriter';
+ }
  .top-space {
    height: 8em;
  }
  /* Sidebar Cart Styling */
 
  .sidebar {
-   width: 0px;
-   height: 100%;
-   position: fixed;
-   right: 0;
-   z-index: 11;
-   transition: width 700ms;
+   width: 32rem;
+   min-height: 20rem;
  }
+
 
 
  /* Styling for Posts*/

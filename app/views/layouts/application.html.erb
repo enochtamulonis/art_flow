@@ -11,13 +11,20 @@
     <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body class="bg-gray-200">
-    <div class="body-container" data-reflex-root="[order_items],[add_to_cart_button]">
+  <body class="bg-gray-200 h-auto">
+    <div class="body-container h-auto" data-reflex-root="[order_items],[add_to_cart_button], [cart_count]">
       <%= render "layouts/top_section" %>
-      <%= render "layouts/navbar" %>
+      <div class="h-full site-size sticky top-0 left-0 right-0 z-50">
+        <div class="w-full h-full relative">
+          <%= render "layouts/navbar" %>
+          <%= render 'cart/sidebar_cart' %>
+        </div>
+      </div>
       <%= render "layouts/alerts" %>
+      <div class="fifteen-rem-margin">
+
+      </div>
       <%= yield %>
     </div>
-    <%= render 'cart/sidebar_cart' %>
   </body>
 </html>
