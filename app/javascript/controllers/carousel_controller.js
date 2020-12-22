@@ -11,8 +11,7 @@ let currentScreenSize
 export default class extends ApplicationController {
   static targets = ["image", "buttons"]
 
-    connect() {
-      super.connect()
+    initialize() {
       this.showImage(0);
       this.setScreenSize();
       totalImages = this.imageTargets.length;

@@ -1,7 +1,5 @@
 <div class="min-h-screen w-full flex flex-col items-center">
-  <br>
   <h1 class="text-4xl my-10">All Paintings</h1>
-  <br>
   <div class="h-full w-full flex justify-center flex-wrap">
     <% @paintings.each do |painting| %>
       <%= render 'painting_tile', :painting => painting %>

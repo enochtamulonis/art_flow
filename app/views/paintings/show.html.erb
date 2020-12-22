@@ -1,11 +1,7 @@
-<div class="mx-auto site-size flex justify-end">
-  <% if (params[:action] == 'show') %>
-    <div class="flex pt-10">
-      <%= link_to "Paintings >", paintings_path %>
-      <h2 class="pl-2"> <%= @painting.name %> </h2>
-    </div>
-  <% end %>
- </div>
+<div class="mx-auto site-size flex pl-10">
+  <%= link_to "Paintings >", paintings_path %>
+  <h2 class="pl-2"> <%= @painting.name %> </h2>
+</div>
 <div class="h-screen w-full flex flex-col relative">
 
   <div class="site-size h-full flex flex-col md:flex-row mt-4 p-10">
