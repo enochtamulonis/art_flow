@@ -6,7 +6,7 @@
     <%= link_to "Contact", contact_path, :class => "#{is_active_by_action?("contact")} text-lg ml-4 hover:text-blue-400" %>
   </div>
   <div class="flex items-center min-w-10">
-    <button data-action="navbar#openCart">
+    <button class="cart-button" data-action="navbar#openCart">
       <i class="fa fa-shopping-bag text-2xl"></i>
     </button>
     <p class="text-xl pl-2" cart_count>

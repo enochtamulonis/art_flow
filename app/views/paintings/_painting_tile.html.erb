@@ -6,7 +6,7 @@
       <%= image_tag(painting.thumbnail(0)) %>
     <% end %>
     <div class="flex flex-col items-center justify-between w-full h-full pt-4">
-      <h3 class="text-xl"><%= painting.name %></h3>
+      <h3 class="typewriter text-xl"><%= painting.name %></h3>
       <div class="w-full min-h-10 flex justify-end py-2 pr-2">
         <h4 class="text-lg">size: <%= painting.size %> </h4>
         <h4 class="text-lg ml-4">price: <%= number_to_currency painting.price %> </h4>
