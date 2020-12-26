@@ -3,7 +3,9 @@
     <h2 class="text-4xl absolute text-gray-200 bg-gray-600 px-4 py-2">Contact Art flow</h2>
   </div>
   <div class="site-size flex pt-4">
-    <h3 class="mx-auto text-xl"> Email: <%= @site_detail.contact_info_email %> </h3>
-    <h3 class="mx-auto text-xl"> Phone: <%= @site_detail.contact_info_phone %> </h3>
+    <% if @site_detail %>
+      <h3 class="mx-auto text-xl"> Email: <%= @site_detail.contact_info_email %> </h3>
+      <h3 class="mx-auto text-xl"> Phone: <%= @site_detail.contact_info_phone %> </h3>
+    <% end %>
   </div>
 </div>

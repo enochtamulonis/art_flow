@@ -2,5 +2,7 @@
   <div class="site-size large-pic-container about-page-image flex flex-col items-center justify-center">
     <h2 class="text-4xl absolute text-gray-300">About Art Flow</h2>
   </div>
-  <div class="typewriter mt-4 text-xl"> <%= @site_detail.content %> </div>
+  <% if @site_detail %>
+    <div class="typewriter mt-4 text-xl"> <%= @site_detail.content %> </div>
+  <% end %>
 </div>
