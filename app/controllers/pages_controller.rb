@@ -7,7 +7,7 @@ class PagesController < ApplicationController
   end
 
   def about
-    @site_detail = SiteDetail.first
+    @site_detail = SiteDetail.first if SiteDetail.count >= 1
   end
 
   def admin
@@ -41,7 +41,7 @@ class PagesController < ApplicationController
   end
 
   def contact
-    @site_detail = SiteDetail.first
+    @site_detail = SiteDetail.first if SiteDetail.count >= 1
   end
 
   private
