@@ -1,5 +1,9 @@
 <div class="flex flex-col items-center min-h-screen min-w-full">
-  <div class="contact-page-container flex flex-col items-center justify-center">
-    <h2 class="text-6xl absolute text-gray-900">Contact Art flow</h2>
+  <div class="contact-page-container site-size contact-page-picture flex flex-col items-center justify-center">
+    <h2 class="text-4xl absolute text-gray-200 bg-gray-600 px-4 py-2">Contact Art flow</h2>
+  </div>
+  <div class="site-size flex pt-4">
+    <h3 class="mx-auto text-xl"> Email: <%= @site_detail.contact_info_email %> </h3>
+    <h3 class="mx-auto text-xl"> Phone: <%= @site_detail.contact_info_phone %> </h3>
   </div>
 </div>

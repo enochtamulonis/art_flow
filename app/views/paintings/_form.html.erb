@@ -12,29 +12,29 @@
     <% end %>
     <div class="flex flex-col items-center w-full pt-4">
       <div class="field w-full md:w-3/4 mt-2">
-        <%= form.label :name %><br>
+        <%= form.label :name, :class => "text-white" %><br>
         <%= form.text_field :name, :class => "pl-2 py-1 w-full" %>
       </div>
       <div class="field sm:w-full md:w-3/4 mt-2">
-        <%= form.label :images %><br>
-        <%= form.file_field :images, multiple: true, :type => "file", accept:'image/*', :class => "w-full py-3 pl-8 border border-gray-700" %>
+        <%= form.label :images, :class => "text-white"  %><br>
+        <%= form.file_field :images, multiple: true, :type => "file", accept:'image/*', :class => "w-full py-3 pl-8 border" %>
       </div>
 
       <br>
       <div class="w-full h-full flex justify-around">
         <div class="field w-1/4 sm:w-1/3 lg:w-1/4">
-          <%= form.label :size %><br>
+          <%= form.label :size, :class => "text-white"  %><br>
           <%= form.text_field :size, :class => "pl-2 py-1 w-full", placeholder: "36' x 72' " %>
         </div>
 
         <div class="field w-1/4 sm:w-1/2 lg:w-1/4">
-          <%= form.label :price %><br>
+          <%= form.label :price, :class => "text-white"  %><br>
           <%= form.number_field :price, step: :any, :class => "pl-2 py-1 w-full" %>
         </div>
       </div>
       <br>
       <div class="actions">
-        <%= form.submit :class => "bg-transparent px-10 py-2 border-2 border-green-400 text-gray-800 hover:bg-green-400 hover:border-yellow-200 transition-all duration-700" %>
+        <%= form.submit :class => "cursor-pointer bg-transparent px-10 py-2 border-2 text-white" %>
       </div>
     </div>
   <% end %>

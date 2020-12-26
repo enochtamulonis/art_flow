@@ -20,3 +20,6 @@ import "stylesheets/application" // ADD THIS LINE
 import controller from '../controllers/index.js'
 
 import "controllers"
+
+require("trix")
+require("@rails/actiontext")

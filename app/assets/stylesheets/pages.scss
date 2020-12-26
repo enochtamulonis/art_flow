@@ -16,19 +16,6 @@
   background-image: url("/store_bg.jpg");
 }
 
-/* About Page Styling */
-
-.about-page-image {
-  background-image: url("/art.jpg");
-}
-
-/* Contact Page Styling */
-
-.contact-page-container {
-  height: 60vh;
-  width: 100%;
-}
-
 .impressionistic-btn:hover {
   background-image: url("/impressionistic.jpg");
   background-position: center;
@@ -45,6 +32,25 @@
 .abstract-btn:hover {
   background-image: url("/abstract.jpg");
   background-position: center;
+  background-size: cover;
+}
+
+/* About Page Styling */
+
+.about-page-image {
+  background-image: url("/art.jpg");
+}
+
+/* Contact Page Styling */
+
+.contact-page-container {
+  height: 60vh;
+  width: 100%;
+}
+
+.contact-page-picture {
+  background: url("/landscape.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
 }
 
