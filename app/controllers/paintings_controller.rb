@@ -6,6 +6,8 @@ class PaintingsController < ApplicationController
   # GET /paintings.json
   def index
     @paintings = Painting.all
+    @q = Painting.ransack(params[:q])
+    @results = @q.result(distinct: true)
   end
 
   # GET /paintings/1

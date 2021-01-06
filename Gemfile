@@ -23,6 +23,7 @@ gem 'devise'
 
 gem "aws-sdk-s3", require: false
 
+gem 'ransack'
 
 # END CUSTOM GEMS
 # Use Redis adapter to run Action Cable in production
