@@ -9,23 +9,11 @@ let currentScreenSize
  * Learn more at: https://docs.stimulusreflex.com
  */
 export default class extends ApplicationController {
-  static targets = ["image", "buttons"]
+  static targets = ["image"]
 
     initialize() {
       this.showImage(0);
-      this.setScreenSize();
       totalImages = this.imageTargets.length;
-    }
-
-    setScreenSize() {
-      currentScreenSize = window.innerWidth;
-    }
-
-    toggleButtons(event) {
-      let screenIsBig = currentScreenSize > 768;
-      if (screenIsBig) {
-        this.buttonsTarget.classList.toggle("md:hidden");
-      }
     }
 
     nextImage(event) {
