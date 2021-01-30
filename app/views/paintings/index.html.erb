@@ -1,19 +1,6 @@
 <div class="min-h-screen w-full flex flex-col items-center">
   <h1 class="typewriter text-4xl mb-4">All Paintings</h1>
-  <div class="site-size mx-auto flex">
-    <%= search_form_for @q do |f| %>
-      <%= f.label :name %>
-      <%= f.search_field :name_cont %>
-      <%= f.submit %>
-    <% end %>
-  </div>
-  <% if @results.any? %>
-    <div class="w-full flex flex-wrap border-b-2 border-black">
-      <% @results.each do |result| %>
-        <%= render 'painting_tile', :painting => result %>
-      <% end %>
-    </div>
-  <% end %>
+
   <div class="h-full w-full flex justify-center flex-wrap">
     <% @paintings.each do |painting| %>
       <%= render 'painting_tile', :painting => painting %>

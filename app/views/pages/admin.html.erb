@@ -8,15 +8,15 @@
       <h2 class="text-center text-xl text-gray-900"> Site Details </h2>
       <%= form_for @site_detail, url: new_site_details_path do |f| %>
         <div class="flex flex-col">
-          <h3 class="text-lg w-4/5 mx-auto mb-2"> Contact </h3>
+          <h3 class="text-lg w-4/5 mx-auto mb-2"> Contact Info </h3>
           <%= f.label :email, :class => "w-4/5 mx-auto py-1 text-gray-900" %>
           <%= f.text_field :contact_info_email, :class => "w-4/5 pl-1 mx-auto", placeholder: "example@example.com" %>
           <%= f.label :phone, :class => "w-4/5 mx-auto py-1 text-gray-800" %>
           <%= f.text_field :contact_info_phone, :class => "w-4/5 pl-1 mx-auto", placeholder: "123-456-7543" %>
           <%= f.label :other, :class => "w-4/5 mx-auto py-1 text-gray-700" %>
           <%= f.text_field :contact_info_other, :class => "w-4/5 pl-1 mx-auto", placeholder: "instagram: @example_account" %>
-          <div class="w-4/5 h-full mx-auto mt-8">
-            <%= f.label :about_page_content, :class => "py-1 text-gray-200" %>
+          <div class="w-4/5 h-full mx-auto mt-1">
+            <%= f.label :about_page_content, :class => "py-1 text-gray-900" %>
             <%= f.rich_text_area :content, :class => "w-full h-full bg-gray-200" %>
             <%= f.submit "Update Details", :class => "w-1/4 mt-4 cursor-pointer bg-transparent text-gray-800 border-2 border-gray-800 p-2" %>
           </div>

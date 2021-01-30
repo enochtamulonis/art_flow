@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
+  devise_for :users
   resources :order_items
   get 'cart/show'
   resources :paintings
-  devise_for :users
   root 'pages#home'
   get '/about', to: "pages#about"
   get '/contact', to: "pages#contact"
