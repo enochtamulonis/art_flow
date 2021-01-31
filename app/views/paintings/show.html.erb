@@ -5,7 +5,7 @@
 <div class="h-full w-full flex flex-col relative">
 
   <div class="site-size h-full flex flex-col md:flex-row mt-4 p-10">
-    <div class="image flex items-center relative" data-controller="carousel">
+    <div class="mt-6 md:mt-0 w-full flex justify-center items-center relative" data-controller="carousel">
       <% @painting.images.each.with_index do |image, index| %>
         <div class="hidden image" id="image-<%= index %>" data-carousel-target="image" data-index="<%= index %>" data-reflex-permanent>
           <%= image_tag(image, class: "w-full h-full") %>
@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="md:ml-auto h-full w-full md:w-1/2 flex flex-col items-center">
-      <h2 class="typewriter text-4xl pt-10 my-10 text-center"> <%= @painting.name %> </h2>
+      <h2 class="typewriter text-2xl md:text-4xl pt-10 my-10 text-center"> <%= @painting.name %> </h2>
       <br>
       <a class="cursor-pointer select-none mt-10 min-h-10 w-3/4 py-4 border-2 border-black flex justify-center items-center">
         <%= @painting.in_stock? ? "Buy now" : "Out of stock" %>
