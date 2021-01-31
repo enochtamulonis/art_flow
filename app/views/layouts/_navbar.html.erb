@@ -1,11 +1,12 @@
 <nav class="site-size navbar typewriter min-h-10 px-4 py-4 w-full bg-gray-200 flex items-center justify-between top-0 z-10 border-t-2 border-b-2 border-black" data-controller="navbar">
-  <div class="w-1/2 flex items-center justify-between">
-    <%= link_to "Art Flow", root_path, :class => "#{is_active_by_action?("home")} text-3xl" %>
-    <%= link_to "Paintings", paintings_path, :class => "#{is_active_by_action?("index")} text-xl ml-4 hover:text-blue-400" %>
-    <%= link_to "About", about_path, :class => "#{is_active_by_action?("about")} text-lg ml-4 hover:text-blue-400" %>
-    <%= link_to "Contact", contact_path, :class => "#{is_active_by_action?("contact")} text-lg ml-4 hover:text-blue-400" %>
+  <div class="w-full flex items-center">
+    <%= link_to "Art Flow", root_path, :class => "#{is_active_by_action?("home")} text-xl md:text-3xl" %>
+    <%= link_to "Paintings", paintings_path, :class => "#{is_active_by_action?("index")} md:inline hidden text-lg md:text-xl ml-8 hover:text-blue-400" %>
+    <%= link_to "About", about_path, :class => "#{is_active_by_action?("about")} hidden md:inline text-md md:text-lg ml-8 hover:text-blue-400" %>
+    <%= link_to "Contact", contact_path, :class => "#{is_active_by_action?("contact")} hidden md:inline text-md md:text-lg ml-8 hover:text-blue-400" %>
   </div>
-  <div class="flex items-center min-w-10">
+
+  <div class="mr-6 flex items-center min-w-10">
     <% if @order_items %>
       <button class="cart-button" data-action="navbar#openCart">
         <i class="fa fa-shopping-bag text-2xl"></i>
@@ -17,4 +18,7 @@
        </p>
      <% end %>
   </div>
+  <button class="md:hidden" data-action="navbar#openNavDropdown">
+    <i class="fas fa-bars text-2xl"></i>
+  </button>
 </nav>

@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>ArtFlow</title>
-    
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -19,6 +19,7 @@
         <div class="w-full h-full relative">
           <%= render "layouts/navbar" %>
           <%= render 'cart/sidebar_cart' %>
+          <%= render 'layouts/navbar_dropdown' %>
         </div>
       </div>
       <%= render "layouts/alerts" %>

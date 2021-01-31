@@ -10,6 +10,10 @@
   background-size: cover;
 }
 
+.picture-border {
+  width: 100%;
+  height: 100%;
+}
 /* Home Page Styling */
 
 .home-page-image {
@@ -73,4 +77,16 @@
     background-position: center;
     background-size: cover;
   }
+
+  .large-pic-container {
+    width: 200vw;
+    background-position: center;
+  }
+
+
+  .picture-border {
+    width: 80vw;
+    overflow: hidden;
+  }
+
 }

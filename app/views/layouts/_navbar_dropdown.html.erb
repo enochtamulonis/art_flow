@@ -1,0 +1,5 @@
+<div class="sidebar bg-gray-300 hidden border-b-2 border-l-2 border-r-2 border-black z-20 absolute right-0 flex flex-col items-center pt-8" id="navbar_dropdown">
+  <%= link_to "All Paintings", paintings_path, :class => "#{is_active_by_action?("index")} text-lg" %>
+  <%= link_to "About Us", about_path, :class => "#{is_active_by_action?("about")} text-lg pt-8" %>
+  <%= link_to "Contact Us", contact_path, :class => "#{is_active_by_action?("contact")} text-lg pt-8" %>
+</div>
