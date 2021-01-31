@@ -7,4 +7,8 @@ class Painting < ApplicationRecord
   def thumbnail input
     return self.images[input].variant(resize_to_fill: [500, 330, { gravity: 'Center' }]).processed
   end
+
+  def in_stock?
+    stock > 0 
+  end
 end

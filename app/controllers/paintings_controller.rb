@@ -85,6 +85,6 @@ class PaintingsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def painting_params
-      params.require(:painting).permit(:name, :size, :price, images: [])
+      params.require(:painting).permit(:name, :size, :price, :stock, images: [])
     end
 end
