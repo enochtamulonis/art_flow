@@ -5,7 +5,7 @@
 <div class="h-full w-full flex flex-col relative">
 
   <div class="site-size h-full flex flex-col md:flex-row mt-4 p-10">
-    <div class="mt-6 md:mt-0 w-full flex justify-center items-center relative" data-controller="carousel">
+    <div class="mt-6 md:mt-0 w-full flex justify-center lg:justify-start items-center relative" data-controller="carousel">
       <% @painting.images.each.with_index do |image, index| %>
         <div class="hidden image" id="image-<%= index %>" data-carousel-target="image" data-index="<%= index %>" data-reflex-permanent>
           <%= image_tag(image, class: "w-full h-full") %>
